@@ -52,7 +52,7 @@
     
 
       <li>
-        <img src="img/vision.jpg" > <!-- random image -->
+        <img src="img/vision.jpg" class="responsive-img materialboxed"> <!-- random image -->
         <div class="caption center-align">
           <h3></h3>
           <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
@@ -60,7 +60,7 @@
       </li>
     
       <li>
-        <img src="img/dahua.jpg" > <!-- random image -->
+        <img src="img/dahua.jpg" class="responsive-img materialboxed"> <!-- random image -->
         <div class="caption Left-align">
           <h3></h3>
           <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
@@ -68,7 +68,7 @@
       </li>
     
     <li>
-        <img src="img/spc.jpg" > <!-- random image -->
+        <img src="img/spc.jpg" class="responsive-img materialboxed"> <!-- random image -->
         <div class="caption right-align">
           <h3></h3>
           <!-- <h5 class="light grey-text text-lighten-3">.</h5> -->
@@ -164,10 +164,10 @@
                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               </div>
             </div>
+           
             <div class="col m4 s12">
               <div class="card-panel center">
-                <i class="material-icons medium">notifications_active
-</i>
+                <i class="material-icons medium">notifications_active</i>
                 <h5>Alarm System</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -184,58 +184,50 @@
 
           <!-- portfolio -->
 
-          
-      <section class="portfolio center scrollspy" id="portfolio">
-        <div class="container">
-        <div class="row">
-            <h3 class="light center text-darken-3 grey-text">Portfolio</h3>
+          <section id="portfolio" class="portfolio scrollspy">
+            <div class="container">
+              <h3 class="light center grey-text text-darken-3">Portfolio</h3>
+              <div class="row center">
 
-          <div class="row">
-          <div class="col m3 s12">
-            <img src="img/pak8.png" class="responsive-img materialboxed">
-          </div>
+                <div class="col m3 s12">
+                  <img src="img/pak4.png" class="responsive-img materialboxed center">
+                </div>
 
-          <div class="row">
-          <div class="col m3 s12">
-            <img src="img/pak4.png" class="responsive-img materialboxed">
-          </div>
-          <div></div>
+                <div class="col m3 s12 center">
+                  <img src="img/pak2.png" class="responsive-img materialboxed">
+                </div>
 
-          <div class="row">
-          <div class="col m3 s12">
-            <img src="img/pak2.png" class="responsive-img materialboxed">
-          </div>
+                <div class="col m3 s12">
+                  <img src="img/pak8.png" class="responsive-img materialboxed">
+              </div>
 
-          <div class="row">
-          <div class="col m3 s12" class="responsive-img materialboxed">
-            <img src="img/6.jpg">
-          </div>
+                <div class="col m3 s12">
+                  <img src="img/6.jpg" class="responsive-img materialboxed">
+                </div>
+            </div>
 
-          <div class="row">
-          <div class="col m3 s12">
-            <img src="img/4.jpg" class="responsive-img materialboxed">
-          </div>
+            <div class="row center">
 
-          <div class="row">
-          <div class="col m3 s12">
-            <img src="img/5.jpg" class="responsive-img materialboxed">
-          </a>
-          </div>
+            <div class="col m3 s12">
+                  <img src="img/5.jpg" class="responsive-img materialboxed">
+              </div>
 
-          <div class="row">
-          <div class="col m3 s12">
-            <img src="img/7.jpg" class="responsive-img materialboxed">
-          </div>
+                <div class="col m3 s12">
+                  <img src="img/1.jpg" class="responsive-img materialboxed">
+                </div>
 
-          <div class="row">
-          <div class="col m3 s12">
-            <img src="img/1.jpg" class="responsive-img materialboxed">
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>
+                <div class="col m3 s12">
+                  <img src="img/7.jpg" class="responsive-img materialboxed">
+              </div>
 
+                <div class="col m3 s12">
+                  <img src="img/4.jpg" class="responsive-img materialboxed">
+              </div>
+            </div>
+
+            </div>
+          </section>
+      
 
       <!-- contact -->
       <section id="contact" class="contact grey lighten-3 scrollspy">
@@ -245,7 +237,7 @@
             <div class="col m5 s12">
               <div class="card-panel blue darken-2 center white-text">
                 <div class="material-icons">email</div>
-                <h5>contact</h5>
+                <h5>Contact</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua.
               </div>
@@ -316,36 +308,6 @@
         M.ScrollSpy.init(scroll, {
           scrollOffset: 50
         });
-
-        //event pada saat di klik
-
-        //paralax
-        $(window).scroll(function(){
-          var wScroll = $(this).scrollTop();
-
-          $('.jumbotron img').css({
-            'transform' : 'translate(0px, '+ wScroll/4 +'%)'
-          });
-
-          $('.jumbotron h1').css({
-            'transform' : 'translate(0px, '+ wScroll/2 +'%)'
-          });
-
-          $('.jumbotron p').css({
-            'transform' : 'translate(0px, '+ wScroll/1.2 +'%)'
-          });
-
-        //portfolio
-        if (wScroll > $('.portfolio').offset().top - 250) {
-          $('.portfolio .thumbnail').each(function(i) {
-            setTimeout(function() {
-              $('.portfolio .thumbnail').eq(i).addClass('muncul');
-            },300 * (i+1));
-          });
-        }
-        });
-
-
       </script>
     </body>
   </html>
